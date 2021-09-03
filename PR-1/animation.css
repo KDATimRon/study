@@ -1,0 +1,80 @@
+@keyframes move-shape {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scale-shape {
+  from {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(2);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes non-rez {
+  33% {
+    transform: translateX(-5px);
+  }
+  66% {
+    transform: translateX(5px);
+  }
+}
+
+@keyframes right-answer {
+  to {
+    border-bottom: 0px solid yellowgreen;
+    color: yellowgreen;
+    font-size: 40px;
+  }
+}
+
+.anhide {
+  animation: move-shape 3s;
+  animation-fill-mode: forwards;
+}
+
+.run div {
+  animation: move-shape, scale-shape 2s;
+  animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  animation-fill-mode: both;
+  animation-direction: alternate;
+  -o-animation-fill-mode: backwards;
+  animation-delay: 2s;
+}
+
+.error input[name^='arg'],
+.error input[id='result'] {
+  animation-play-state: inherited;
+  animation: non-rez 200ms;
+  animation-iteration-count: 2;
+  border-bottom-color: tomato;
+}
+
+.error1 input[name^='arg'],
+.error1 input[id='result'] {
+  animation-play-state: inherited;
+  animation: non-rez 200ms;
+  animation-iteration-count: 2;
+  border-bottom-color: tomato;
+}
+
+.right-answer input[name^='arg'],
+.right-answer input[id='result'] {
+  animation: right-answer 1s;
+  animation-fill-mode: forwards;
+}
+
+.run input {
+  animation: move-shape, scale-shape 2s;
+  animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+  animation-delay: 4s;
+  animation-fill-mode: both;
+}

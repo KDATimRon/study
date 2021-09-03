@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>Сумма чисел</title>
+    <meta charset="utf-8" />
+    <link href="style.css" rel="stylesheet" />
+    <link href="animation.css" rel="stylesheet" />
+  </head>
+  <body>
+    <main>
+      <h1>Сумма чисел</h1>
+      <section class="content hide">
+        <div class="argument first">
+          <fieldset>
+            <legend>Первое число:</legend>
+            <div class="shapes circles">
+              <!--блоки фигур-->
+            </div>
+            <div class="input-arg">
+              <input type="text" name="arg1" id="arg1" data-arg="" required disabled />
+            </div>
+          </fieldset>
+        </div>
+        <div class="operand amount"></div>
+        <div class="argument second">
+          <fieldset>
+            <legend>Второе число:</legend>
+            <div class="shapes square">
+              <!--блоки фигур-->
+            </div>
+            <div class="input-arg">
+              <input type="text" name="arg2" id="arg2" data-arg="" required disabled />
+            </div>
+          </fieldset>
+        </div>
+        <div class="operand equally"></div>
+        <div class="input-arg">
+          <input type="text" name="result" id="result" data-arg="" required disabled />
+        </div>
+      </section>
+      <div class="btn-panel">
+        <a href="#" class="button"><span>A</span></a>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
