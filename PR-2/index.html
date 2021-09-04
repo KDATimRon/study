@@ -9,14 +9,12 @@
   <body>
     <main>
       <h1>Числовая последовательность</h1>
-      <section class="content">
-        <h2 class="step1">Нажми на окошко в первом вагоне</h2>
-        <div class="train train-run1">
+      <section class="content hide">
+        <h2>Нажми на локомотив поезда</h2>
+        <div class="train">
           <div class="loco"></div>
           <div class="van-1">
-            <div class="window-1">
-              <div class="center">2</div>
-            </div>
+            <div class="window-1"><div class="center">2</div></div>
             <div class="window-2"><div class="center">-</div></div>
           </div>
           <div class="van-2">
@@ -31,12 +29,19 @@
             <div class="window-1"><div class="center">9</div></div>
             <div class="window-2"><div class="center">!</div></div>
           </div>
-          <div class="van-5"></div>
+          <div class="van-5">
+            <div class="window-1">
+              <div class="center">
+                <input type="text" name="rez" id="rez" required disabled />
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="btn-panel run1">
+        <div class="btn-panel anhide">
           <div class="button"><span>A</span></div>
         </div>
       </section>
     </main>
+    <script src="script.js"></script>
   </body>
 </html>
