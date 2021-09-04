@@ -43,9 +43,28 @@ let gerArgWindowsTrain = (list) => {
   for (let i = 0; i < list.length - 2; i++) {
     list[i].innerHTML = strExp[i];
   }
+  return strExp.split('');
 };
 
-gerArgWindowsTrain(windowArg);
+let getResultExp = (arr, oper) => {
+  let opers = ['*', '/', '+', '-'];
+  console.log(arr);
+  let index = 0;
+  let rez = 0;
+  console.log(arr);
+  if (arr.includes(opers[0])) {
+    index = arr.indexOf(opers[0]);
+    rez = arr[index - 1] * arr[index + 1];
+    arr.splice(index - 1, 3, rez);
+    console.log(`${index - 1}, ${3}, ${rez}`);
+    console.log(index);
+    console.log(rez);
+    console.log(arr);
+  }
+};
+
+let result = gerArgWindowsTrain(windowArg);
+getResultExp(result);
 
 let toggetMessage = (show) => {
   if (show) {
