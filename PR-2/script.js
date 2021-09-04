@@ -43,28 +43,8 @@ let gerArgWindowsTrain = (list) => {
   for (let i = 0; i < list.length - 2; i++) {
     list[i].innerHTML = strExp[i];
   }
-  return strExp.split('');
+  return Math.round(eval(strExp));
 };
-
-let getResultExp = (arr, oper) => {
-  let opers = ['*', '/', '+', '-'];
-  console.log(arr);
-  let index = 0;
-  let rez = 0;
-  console.log(arr);
-  if (arr.includes(opers[0])) {
-    index = arr.indexOf(opers[0]);
-    rez = arr[index - 1] * arr[index + 1];
-    arr.splice(index - 1, 3, rez);
-    console.log(`${index - 1}, ${3}, ${rez}`);
-    console.log(index);
-    console.log(rez);
-    console.log(arr);
-  }
-};
-
-let result = gerArgWindowsTrain(windowArg);
-getResultExp(result);
 
 let toggetMessage = (show) => {
   if (show) {
@@ -90,4 +70,16 @@ loco.addEventListener('click', function () {
     toggetMessage(true);
     message.innerHTML = 'Решите пример и запишите ответ в окно последнего вагона';
   }, 4000);
+});
+
+let result = gerArgWindowsTrain(windowArg);
+console.log(result);
+
+input.addEventListener('change', function () {
+  if (input.value !== String(result)) {
+    windowArg[windowArg.length - 1].classList.add('error');
+  } else {
+    windowArg[windowArg.length - 1].classList.remove('error');
+    windowArg[windowArg.length - 1].classList.add('correctly');
+  }
 });
