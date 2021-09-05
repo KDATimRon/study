@@ -78,8 +78,15 @@ console.log(result);
 input.addEventListener('change', function () {
   if (input.value !== String(result)) {
     windowArg[windowArg.length - 1].classList.add('error');
+    setTimeout(() => {
+      windowArg[windowArg.length - 1].classList.remove('error');
+    }, 4000);
   } else {
+    toggetMessage(false);
     windowArg[windowArg.length - 1].classList.remove('error');
     windowArg[windowArg.length - 1].classList.add('correctly');
+    input.setAttribute('disabled', 'disabled');
+    train.classList.remove('train-run');
+    train.classList.add('train-run-end');
   }
 });
