@@ -130,11 +130,11 @@ let getDragDropElement = (element) => {
     };
   };
   function enterDroppable(elem, litter) {
-    console.log(elem.dataset.litter);
-    console.log(litter.dataset.litter);
     if (elem.dataset.litter === litter.dataset.litter) {
+      litter.classList.toggle('error');
       elem.style.cssText = 'background: rgb(179 231 100);';
     } else {
+      litter.classList.toggle('error');
       elem.style.cssText = 'background: rgb(255 100 114);';
     }
   }
