@@ -8,9 +8,7 @@ body {
 main {
   position: relative;
   justify-content: space-between;
-  min-width: 300px;
-  max-width: 650px;
-  width: 65%;
+  width: 650px;
   /*height: 650px;*/
   margin: 30px auto;
   overflow: auto;
@@ -56,6 +54,41 @@ main {
   height: 50px;
   border: #7b76b6 2px dashed;
   border-radius: 10px;
+}
+
+@keyframes scale {
+  from {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.scale {
+  animation: scale 2s both ease-in;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  33% {
+    transform: rotate(-90deg);
+  }
+  66% {
+    transform: rotate(90deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+.rotate {
+  animation: rotate both 1s ease-in-out;
 }
 
 .abc {
@@ -123,5 +156,5 @@ img {
 .big-button:active {
   box-shadow: 0px 3px 3px yellow, 0px 3px 6px rgba(0, 0, 0, 0.9);
   position: absolute;
-  top: 41%;
+  top: 46%;
 }
