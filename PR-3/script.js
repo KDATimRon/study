@@ -1,6 +1,7 @@
 let btnRun = $('.big-button');
 let picWrapper = $('.pic-wrapper');
 let abc = $('.abc');
+const main = document.querySelector('main');
 
 let tempWrapper = document.querySelector('#temp-wrapper').content;
 let itemWrapper = tempWrapper.querySelector('.wrapper');
@@ -84,8 +85,8 @@ let getDragDropElement = (element) => {
   element.classList.remove('scale');
 
   element.onmousedown = (event) => {
-    //let shiftX = event.clientX - element.getBoundingClientRect().left;
-    //let shiftY = event.clientY - element.getBoundingClientRect().top;
+    let shiftX = main.getBoundingClientRect().left + event.offsetX + 10;
+    let shiftY = main.getBoundingClientRect().top + event.offsetY + 30;
 
     element.style.cssText = 'position: absolute; z-index: 100;';
     /* document.body.append(element);*/
@@ -93,8 +94,8 @@ let getDragDropElement = (element) => {
     moveAt(event.pageX, event.pageY);
 
     function moveAt(pageX, pageY) {
-      element.style.left = pageX - 370 + 'px';
-      element.style.top = pageY - 55 + 'px';
+      element.style.left = pageX - shiftX + 'px';
+      element.style.top = pageY - shiftY + 'px';
     }
 
     function onMouseMove(event) {
