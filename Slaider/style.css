@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+}
+
+html,
+body {
+  font-size: 18px;
+}
+
+main {
+  margin: 30px auto;
+  width: 90%;
+}
+
+.conteiner {
+  background-color: burlywood;
+  padding: 5px 20px;
+}
+
+.slaider {
+  padding: 0px;
+  margin: 20px auto;
+  max-width: 80%;
+  overflow-x: hidden;
+}
+
+.slaider-line {
+  display: flex;
+  transition: all ease 1s;
+}
+
+button {
+  background: none;
+  border: 1px solid black;
+  border-radius: 4px;
+  padding: 10px 20px;
+}
+button:hover {
+  background: brown;
+}
+button:active {
+  background: black;
+  color: white;
+}

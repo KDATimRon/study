@@ -1,0 +1,68 @@
+* {
+  margin: 0;
+}
+
+html,
+body {
+  color: white;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.conteiner {
+  width: 90%;
+  margin: 20px auto;
+  background-color: #1c1c1c;
+  border: 2px solid white;
+  box-shadow: 0 0 3px 0 black;
+  border-radius: 20px;
+  min-width: 400px;
+  max-width: 1000px;
+}
+h1 {
+  text-align: center;
+  padding-top: 20px;
+}
+
+.image-out {
+  display: flex;
+  justify-content: center;
+  margin: 40px 0;
+  padding: 20px 0;
+  border-top: 1px solid rgb(43, 42, 42);
+  border-bottom: 1px solid rgb(43, 42, 42);
+}
+
+.image-out img {
+  margin: 10px;
+  display: block;
+  width: 11%;
+  height: auto;
+  border: 1px solid white;
+  border-radius: 10px;
+}
+
+.image-out .active,
+.image-out img:hover {
+  box-shadow: 0 0 5px 0 rgb(88, 154, 253);
+  border-color: rgb(88, 154, 253);
+  transform: scale(1.1);
+}
+
+.image-out img:hover {
+  transition: all ease 500ms;
+}
+
+.info {
+  padding: 20px;
+  padding-top: 0;
+}
+
+.description {
+  border: 1px dashed rgb(43, 42, 42);
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.specifications p {
+  margin-left: 15px;
+}
