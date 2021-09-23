@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+}
+
+.btn-block {
+  padding: 30px;
+  width: 50%;
+  margin: 30px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid tomato;
+}
+
+button {
+  background: none;
+  padding: 10px 20px;
+  border: 1px solid tomato;
+  border-radius: 5px;
+}
+
+button:hover {
+  background: tomato;
+  color: white;
+}
+
+button:active {
+  box-shadow: 0 0 0 2px tomato;
+  border-color: white;
+}

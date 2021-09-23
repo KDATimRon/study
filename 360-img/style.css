@@ -1,0 +1,24 @@
+* {
+  margin: 0;
+}
+main {
+  width: 60%;
+  margin: 30px auto;
+  border: 2px solid #413033;
+  border-radius: 10px;
+}
+
+.image-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input[type='range'] {
+  margin-bottom: 20px;
+}
+
+img {
+  width: 35%;
+  height: auto;
+}
