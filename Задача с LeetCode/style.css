@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+}
+
+html,
+body {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 18px;
+}
+
+#canvas {
+  margin: 0 auto;
+  display: block;
+  position: relative;
+  box-sizing: content-box;
+  border: 1px solid tomato;
+  box-shadow: 0 0 3px 3px rgb(214, 214, 214);
+  border-radius: 20px;
+}
+h1 {
+  text-align: center;
+  color: tomato;
+  text-shadow: 2px 0 3px rgb(5, 5, 5);
+  margin-bottom: 20px;
+}
+
+.message {
+  position: absolute;
+  left: 50%;
+  top: 150px;
+  transform: translateX(-50%);
+  background: tomato;
+  color: white;
+  padding: 5px 10px;
+  border: 1px solid white;
+  border-radius: 10px;
+  box-shadow: 0 0 0 3px tomato;
+}
