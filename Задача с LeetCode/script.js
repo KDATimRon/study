@@ -30,7 +30,7 @@ ctx.stroke(); // контур осей
 let Y0 = chart.axisY; //начальные координаты
 let X0 = chart.padding; //точка 0
 
-Array(maxElem + 1).forEach((item, index) => {
+Array.from({ length: maxElem + 1 }).forEach((item, index) => {
   ctx.fillText(index, X0 - 15, Y0 - 20);
   ctx.moveTo(X0 + 5, Y0);
   ctx.lineTo(X0 - 5, Y0);
