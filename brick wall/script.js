@@ -68,6 +68,31 @@ function drawBrickWall(array, hight, padding) {
   });
 }
 
+function drawLine(yh, hight, count) {
+  let x = hight * (count + 1);
+  let y = hight;
+  let h = yh * hight;
+  ctx.beginPath();
+  ctx.fillStyle = 'rgba(28,211,162,0.5)';
+  ctx.rect(x - 8, y - 5, 11, h + 5);
+  ctx.fill();
+}
+
+function leastBricks(wall) {
+  let map = {};
+  let max = 0;
+  wall.forEach((row) => {
+    let sum = 0;
+    for (let i = 0; i < row.length - 1; i++) {
+      sum += row[i];
+      map[sum] = map[sum] ? map[sum] + 1 : 1;
+      max = Math.max(map[sum], max);
+    }
+  });
+  drawLine(wall.length, brickWall.hight, max);
+  return wall.length - max;
+}
+
 drawAxisXY(brickWall.axisX, brickWall.axisY);
 drawAxisY(
   brickWall.countY,
@@ -82,3 +107,7 @@ drawAxisX(
   brickWall.hight
 );
 drawBrickWall(brickWall.widths, brickWall.hight, brickWall.padding);
+
+$(canvas).on('click', () => {
+  $(message).text(`Минимум - ${leastBricks(brickWall.widths)} кирпича`);
+});
