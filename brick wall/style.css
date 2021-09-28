@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+}
+
+html,
+body {
+  background: #272627;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 18px;
+  color: antiquewhite;
+}
+
+h1,
+h3 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+#canvas {
+  display: block;
+  margin: 0 auto;
+  border: 1px solid antiquewhite;
+  border-radius: 15px;
+}
+
+h3 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 5px;
+  color: chocolate;
+}
